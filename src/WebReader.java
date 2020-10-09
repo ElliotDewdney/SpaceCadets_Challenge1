@@ -1,5 +1,3 @@
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +32,7 @@ public class WebReader {
         }
 
         public String GetNameData(){
-            return pageData.split("<title>")[1].split("\\|")[0];
+            return pageData.split("property=\"name\">")[1].split("<")[0];
         }
 
         public String toString(){
