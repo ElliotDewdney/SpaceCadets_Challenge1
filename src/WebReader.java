@@ -13,10 +13,9 @@ public class WebReader {
         private String pageData;
         PageReader(String emailID) throws IOException {
             this.emailID = emailID;
-            URL url = new URL("https://www.ecs.soton.ac.uk/people/dem" + emailID);
+            URL url = new URL("https://www.ecs.soton.ac.uk/people/" + emailID);
             InputStream inputStream = url.openStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            // not the standard way to do this
             class pageDetails{
                 String pageString = "";
                 void add(String data){
