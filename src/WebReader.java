@@ -31,7 +31,7 @@ public class WebReader {
         }
 
         public String GetNameData(){
-            return pageData.split("property=\"name\">")[1].split("<")[0];
+            return pageData.split("property=\"name\">")[1].split("<em property")[0];
         }
 
         public String toString(){
